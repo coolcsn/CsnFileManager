@@ -40,9 +40,13 @@ class IndexController extends AbstractActionController
 			return $this->redirect()->toRoute('login');		
 		}
 
+		if(!is_dir($fileManagerDir)) {
+			mkdir($fileManagerDir, 0777);
+		}
+		
 		$this->_dir = realpath($fileManagerDir) .
-			DIRECTORY_SEPARATOR .
-			$user->getId();
+				DIRECTORY_SEPARATOR .
+				$user->getId();
 	}
 
     public function indexAction()

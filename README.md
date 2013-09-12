@@ -22,7 +22,7 @@ Installation
 )
 ```
 
-**Note: ** You may need to enable the `php_fileinfo` extension depending on your *php* version.
+**Note:** You may need to enable the `php_fileinfo` extension depending on your *php* version.
 
 >### How can I upload my gorgeous profile picture? ###
 Navigate to ***[hostname]/csn-file-manager***. Enjoy :)
