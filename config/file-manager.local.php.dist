@@ -1,0 +1,6 @@
+<?php
+return array(
+	'file_manager' => array(
+		'dir' => 'C:\ZF2AppData\uploads',
+	),
+);

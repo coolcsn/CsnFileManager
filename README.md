@@ -10,6 +10,8 @@ Installation
 1. Installation via composer is supported, simply run:
 `php composer.phar require coolcsn/csn-file-manager:dev-master`
 
+2. Copy the sample file-manager configuration from `./vendor/coolcsn/csn-file-manager/config/file-manager.local.php.dist` to `./config/autoload` renaming it to **file-manager.local.php**. Edit the file, replacing the directory path with one where you want to store the uploads.
+
 3. Add 'CsnFileManager' to your application configuration in `config/application.config.php`. An example application configuration could look like the following:
 
 ```
@@ -20,12 +22,12 @@ Installation
 )
 ```
 
->### How can I upload my gorgeous profile picture now? ###
+>### How can I upload my gorgeous profile picture? ###
 Navigate to ***[hostname]/csn-file-manager***. Enjoy :)
 
 Dependencies
 ------------
-This Module requires that you have a working authentication and authorization modules (in order to control who can upload files and who has access to them). You can use check [coolcsn/CsnUser](https://github.com/coolcsn/CsnUser) and [coolcsn/CsnAuthorization](https://github.com/coolcsn/CsnAuthorization).
+This Module requires that you have a working authentication and authorization modules (in order to control who can upload files and who has access to them). You can check [coolcsn/CsnUser](https://github.com/coolcsn/CsnUser) and [coolcsn/CsnAuthorization](https://github.com/coolcsn/CsnAuthorization).
 
 Recommends
 ----------
