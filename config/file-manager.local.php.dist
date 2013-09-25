@@ -2,5 +2,6 @@
 return array(
 	'file_manager' => array(
 		'dir' => 'C:\ZF2AppData\uploads',
+		'maxSize' => 204800,
 	),
 );

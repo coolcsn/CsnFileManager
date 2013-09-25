@@ -10,7 +10,7 @@ Installation
 1. Installation via composer is supported, simply run:
 `php composer.phar require coolcsn/csn-file-manager:dev-master`
 
-2. Copy the sample file-manager configuration from `./vendor/coolcsn/csn-file-manager/config/file-manager.local.php.dist` to `./config/autoload` renaming it to **file-manager.local.php**. Edit the file, replacing the directory path with one where you want to store the uploads.
+2. Copy the sample file-manager configuration from `./vendor/coolcsn/csn-file-manager/config/file-manager.local.php.dist` to `./config/autoload` renaming it to **file-manager.local.php**. Edit the file, replacing the directory path with one where you want to store the uploads, set the maximum file size in bytes - default is 200kb.
 
 3. Add 'CsnFileManager' to your application configuration in `config/application.config.php`. An example application configuration could look like the following:
 

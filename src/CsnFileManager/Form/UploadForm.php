@@ -20,11 +20,15 @@ class UploadForm extends Form
 {
 
 	protected $_dir;
+	protected $serviceLocator;
 
-    public function __construct($dir, $name = null, $options = array())
+    public function __construct($serviceLocator, $dir, $name = null, $options = array())
     {
         parent::__construct($name, $options);
+		$this->serviceLocator = $serviceLocator;
 		$this->_dir = $dir;
+		
+		$this->setAttribute('enctype','multipart/form-data');
         $this->addElements();
         $this->addInputFilter();
     }
@@ -59,12 +63,14 @@ class UploadForm extends Form
         $fileInput = new InputFilter\FileInput('image-file');
         $fileInput->setRequired(true);
 
+		$maxSize = $this->serviceLocator->get('Config')['file_manager']['maxSize'];
+		
         // You only need to define validators and filters
         // as if only one file was being uploaded. All files
         // will be run through the same validators and filters
         // automatically.
         $fileInput->getValidatorChain()
-            ->attachByName('filesize',      array('max' => 204800))
+            ->attachByName('filesize',      array('max' => $maxSize))
             ->attachByName('filemimetype',  array('mimeType' => 'image/png, image/x-png, image/jpeg'));
 //          ->attachByName('fileimagesize', array('maxWidth' => 100, 'maxHeight' => 100));
 

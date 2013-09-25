@@ -54,6 +54,8 @@ return array(
 		
 		'display_exceptions' => true,
     ),
+	
+	/*
     'doctrine' => array(
         'driver' => array(
 			__NAMESPACE__ . '_driver' => array(
@@ -70,4 +72,6 @@ return array(
             )
         )
     ),
+	*/
+	
 );

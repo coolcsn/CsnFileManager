@@ -75,7 +75,7 @@ class IndexController extends AbstractActionController
 		if (!is_dir($this->_dir)) {
 			mkdir($this->_dir, 0777);
 		}			
-		$form = new UploadForm($this->_dir, 'upload-form');
+		$form = new UploadForm($this->getServiceLocator(), $this->_dir, 'upload-form');
 	    $request = $this->getRequest();
 		if ($request->isPost()) {
 			// Make certain to merge the files info!
